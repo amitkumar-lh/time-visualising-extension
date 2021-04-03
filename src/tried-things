@@ -1,0 +1,72 @@
+// Questions:
+// 1.What to do about page visibility api? How to make it run without refresh and sometimes it does not run
+// at all? 
+ //b.when page has to be turned then only it starts
+// 2. Idle api stops-->when we are watching youtube deliberately
+// 3.Performace improvement-->many apis setTimeout
+//4.should i clear time interval or above approach is fine?
+//5.doesnot open after idle detection stops the time? maybe performance issues?--why it stops in 1 min?
+
+
+
+
+// let interVal:any;
+
+// chrome.storage.local.get(["stop", "active"], function (data) {
+//   if(!data.active){
+//     chrome.runtime.sendMessage({"INACTIVE":true} );
+//   }
+//   console.log(!data.stop ,data.active)
+//   if  (data.active) {
+//         interVal=setInterval(store, 1000);
+//   }
+//   else{
+//       clearInterval(interVal)
+//   }
+// })
+
+
+
+
+// console.log('active',activeUrl)
+// chrome.tabs.sendMessage(tabs[0].id||0, {action: "Sleep"});
+// const getAway=()=>{
+//   chrome.runtime.onMessage.addListener((message: any) => {
+//     if(message['type']){
+//       return true;
+//     }
+//     else{
+//       return false;
+//     }
+
+//   })
+
+// }
+// }
+//setInterval(idle,20000)
+
+// chrome.runtime.onMessage.addListener((message: any)=>{
+//  if(message.type==='stop'){
+//   clearInterval(IntervalId);
+//    alert('stopped')
+//  }
+//  if(message.type==='start'){
+//   IntervalId=setInterval(store,1000)
+//  }
+// })
+
+// // chrome.tabs.onUpdated.addListener(store);
+
+
+============================================================================
+// const url=location.href
+// console.log(url)
+// body[0]?.prepend(url);
+
+// if (url){
+//     const date:any=new Date().getSeconds()
+//     console.log(date)
+//     chrome.storage.local.set({date});
+// }
+// chrome.runtime.onMessage.addListener((message: any,sender,sendResponse)=>{
+//     if (message.action==="Sleep")
