@@ -16,23 +16,23 @@ const Email = ({ labels, datum }: any) => {
   //     apiCall();
   //   };
 
-  const apiCall = async () => {
-    try {
-      const response = await axios.post("http://localhost:5000/send", {
-        labels: labels,
-        datum: datum,
-        message: message,
-        mail: mail,
-      });
-      if (response.status === 200) {
-        alert("email sent");
-        setMail("");
-        setMessage("");
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  // const apiCall = async () => {
+  //   try {
+  //     const response = await axios.post("http://localhost:5000/send", {
+  //       labels: labels,
+  //       datum: datum,
+  //       message: message,
+  //       mail: mail,
+  //     });
+  //     if (response.status === 200) {
+  //       alert("email sent");
+  //       setMail("");
+  //       setMessage("");
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
   const handleClick = () => {
     chrome.storage.local.set({ mail: mail });
